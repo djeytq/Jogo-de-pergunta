@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo.css">
+    <title>TQWebs-Activity</title>
+</head>
+<body>
+    <div class="container"> <!--A div que vai container toda estrutura do nosso jogo-->
+        <header> <!--O cabeçalho do nosso jogo-->
+            <button onclick="start()">Começar o Jogo</button>
+            <span id="meter">90</span><!--contador regressivo-->
+        </header>
+    
+        <section>
+            <div class="pergunta"><!--Div para as abergar as perguntas-->
+                <p id="ask">Nossa pergunta Que, foi o prmerio a ir a lua e, 2024.
+                    no ano de dos cunuanga dos sdaslf sdfhsaldf
+                </p>
+            </div>
+
+            <div class="respostas"><!--Div para as abergar as respostas-->
+                <button id="opt1">opção1</button>
+                <button id="opt2">opção2</button>
+                <button id="opt3">opção3</button>
+                <button id="opt4">opção4</button>
+            </div>
+        </section>
+
+        <span class="pts" id="pts">0</span><!--Aqui vai somar os pontos a cada resposta certa-->
+        <button class="next" id="next">Next</button><!--Botão para proxima pergunta-->
+        <footer>
+            <p>&COPY; <small>Copy Right by <strong>TQWebs</strong> 2024</small></p>
+        </footer>
+    <script src="interacao.js"></script>
+    </div>
+    
+</body>
+</html>

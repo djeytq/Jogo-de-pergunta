@@ -1,0 +1,132 @@
+*{
+    box-sizing: border-box;
+}
+@keyframes animar{
+    5%{border-top:2px solid red;}
+    35%{border-right:2px solid red;}
+    65%{border-bottom:2px solid red;}
+    100%{border-left:2px solid red;}
+}
+
+body{
+    padding: 0; /*espaço dentro será zero*/
+    margin: 0; /*espaço fora será zero*/
+    font-family: arial;
+    background: #123162;
+}
+.container{
+    /* width: 70%; */
+    /* margin: auto; */
+    display: flex; /*vai ter uma apresentação fkexível*/
+    flex-direction: column; /*Os elementos dentro vão dispor-se em coluna(uma por baixo do outro)*/
+    padding: 20px; /*espaço dentro será 20px*/
+    align-items: center; /*alinhas na horizontal os elementos */
+}
+.container header{/*O que vai abergar o botão de comelar o jogo e o contador*/
+    /* border: 1px solid red; */
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+.container header button{/*O botão de começar o jogo*/
+    /* display: none; */
+    font-size: 20px;
+    color: aliceblue;
+    background: linear-gradient(180deg, blue 10%, rgb(12, 12, 32) 80%);
+    border-radius: 5px;
+}
+.container header button:hover{/*Quando o mouse está sobre*/
+    border: 2px solid rgb(43, 217, 226);
+}
+.container header button:active{/*Quando o mouse é pressonado*/
+    background: linear-gradient(180deg, rgb(12, 12, 32) 10%, blue 80%);
+}
+.container header span{/*O contador*/
+    display: none;/*O contador só irá aparecer quando o jogo começar, isso acontecera no arquivo javascript*/
+    font-size: 50px;
+    font-weight: bold;
+    text-shadow: 1px 1px 5px blue;
+}
+.container section .pergunta{/*Espaço aonde tem a pergunta*/
+    min-height: 90px;
+    max-width: 485px;
+    min-width: 350px;
+    border-radius: 10px;
+    padding: 5px;
+    background: linear-gradient(90deg, rgba(28, 28, 212, 0.58) 30%, rgba(13, 13, 102, 0.494) 70%);
+    margin-bottom: 20px;
+    border: 2px solid blue;
+    box-shadow: 1px 1px 10px #000;
+}
+.container section .pergunta p{/*O paragrafo que contem a pergunta*/
+    text-align: justify;
+    font-weight: 600;
+    overflow-wrap: break-word;
+    color: rgb(38, 41, 44);
+    font-size: 19px;
+    text-shadow: 0px 0px 3px aliceblue;
+}
+.container section .respostas{/*Espaço aonde estão as respostas*/
+    border: 2px solid rgb(24, 20, 51);
+    display: flex;
+    flex-direction: column;
+    background: rgba(0, 88, 165, 0.564); 
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    box-shadow: 1px 2px 10px #000;
+}
+.container section .respostas button{/*Botões de opções de respostas*/
+    margin-bottom: 10px;
+    background: blue;
+    min-height: 30px;
+    padding: 8px;
+    box-shadow: 1px 1px 5px #000;
+    text-align: left;
+    font-size: 18px;
+    font-weight: 600;
+    text-shadow: 0px 0px 3px white;
+}
+.pts{
+    background: yellowgreen;
+    width: 85px;
+    height: 80px;
+    text-align: center;
+    transform: translateY(10px);
+    font-weight: 700;
+    font-size: 30px;
+    padding-top: 24px;
+    border-radius: 50%;
+    position: absolute;
+    right: 30px;
+    border: 2px solid blue;
+    box-shadow: 1px 1px 5px #000;
+}
+.next{/*botão next*/
+    font-size: 25px;
+    padding: 5px;
+    color: white;
+    font-weight: bold;
+    background: linear-gradient(180deg, rgb(0, 255, 157) 10%, rgb(15, 117, 35) 80%);
+    border-radius: 5px;
+    border: 1px solid rgb(0, 0, 0);
+    margin-bottom: 20px;
+}
+.next:hover{/*Quando o mouse está sobre*/
+    border: 2px solid rgb(43, 217, 226);
+}
+.next:active{/*Quando o mouse é pressonado*/
+    background: linear-gradient(180deg, rgb(15, 117, 35) 10%,  rgb(0, 255, 157) 80%)
+}
+footer{
+    box-shadow: 1px 1px 5px #ccc;
+    color: aliceblue;
+    border: 2px solid #ccc;
+    padding: 5px;
+    animation-name: animar;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
